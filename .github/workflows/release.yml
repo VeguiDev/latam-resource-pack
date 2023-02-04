@@ -16,7 +16,7 @@ jobs:
         run: zip -r LatamResourcePack.zip assets pack.mcmeta
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          repo_token: "${{ secrets.TOKEN }}"
           prerelease: false
           title: "Resource Pack Version"
           files: |
