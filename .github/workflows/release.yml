@@ -6,12 +6,12 @@ on:
 
 jobs:
   release:
-    name: "Release"
+    name: "Make Release"
     runs-on: "ubuntu-latest"
 
     steps:
-      - name: "Install zip"
-        run: sudo apt install zip
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: "Compress"
         run: zip -r LatamResourcePack.zip assets pack.mcmeta
       - uses: "marvinpinto/action-automatic-releases@latest"
