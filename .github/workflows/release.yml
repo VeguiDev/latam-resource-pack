@@ -1,0 +1,24 @@
+name: "Automatic Release"
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: "Release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Install zip"
+        run: sudo apt install zip
+      - name: "Compress"
+        run: zip -r LatamResourcePack.zip *
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
+          title: "Resource Pack Version"
+          files: |
+            *.zip
+      
