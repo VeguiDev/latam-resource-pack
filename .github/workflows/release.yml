@@ -14,12 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: "Compress"
-        run: zip -r LatamResourcePack.zip assets pack.mcmeta
-      - uses: "marvinpinto/action-automatic-releases@latest"
+        run: zip -r LatamResourcePack-${{github.ref}}.zip assets pack.mcmeta
+      - name: Creating Release
+        uses: ncipollo/release-action@v1.12.0
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          prerelease: false
-          title: "Resource Pack Version"
-          files: |
-            *.zip
-      
+          artifacts: "LatamResourcePack-${{github.ref}}.zip"
+          generateReleaseNotes: true
+          makeLatest: true
