@@ -1,0 +1,49 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "resources/fullscreen-black.png",
+            "chars": [
+                "\ue238"
+            ],
+            "height": 1000,
+            "ascent": 500
+        },
+        {
+            "type": "bitmap",
+            "file": "resources/network-logo-a.png",
+            "chars": [
+                "\ue000"
+            ],
+            "height": 25,
+            "ascent": 12
+        },
+        {
+            "type": "bitmap",
+            "file": "resources/network-logo-b.png",
+            "chars": [
+                "\ue001"
+            ],
+            "height": 25,
+            "ascent": 12
+        },
+        {
+            "type": "bitmap",
+            "file": "resources/network-logo.png",
+            "chars": [
+                "\ue002"
+            ],
+            "height": 50,
+            "ascent": 25
+        },
+        {
+            "type": "bitmap",
+            "file": "resources/network-logo.png",
+            "chars": [
+                "\ue003"
+            ],
+            "height": 150,
+            "ascent": 75
+        }
+    ]
+}
