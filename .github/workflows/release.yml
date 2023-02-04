@@ -13,7 +13,7 @@ jobs:
       - name: "Install zip"
         run: sudo apt install zip
       - name: "Compress"
-        run: zip -r LatamResourcePack.zip *
+        run: zip -r LatamResourcePack.zip assets pack.mcmeta
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
